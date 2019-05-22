@@ -2,10 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.Service.UserService;
 import com.example.demo.entity.TbUserEntity;
-import com.example.demo.mapper.customer.TbUserMapper;
-import org.apache.ibatis.transaction.Transaction;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -35,5 +35,11 @@ public class UserController {
     @GetMapping("/test")
     public void test(){
         userService.test();
+    }
+    @GetMapping("/selfSelectById")
+    @ResponseBody
+    @ApiOperation(value = "查询测试", notes = "查询测试1")
+    public TbUserEntity selfSelectById(@RequestParam(value = "id") Integer id){
+        return userService.selfSelectById(id);
     }
 }

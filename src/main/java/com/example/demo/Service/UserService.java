@@ -35,7 +35,7 @@ public class UserService {
         return list;
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void test(){
         insert();
         update();
@@ -47,6 +47,9 @@ public class UserService {
         }
         System.out.println("执行插入方法");
         insert();
+    }
 
+    public TbUserEntity selfSelectById(Integer id){
+        return tbUserMapper.selfSelectById(id);
     }
 }
