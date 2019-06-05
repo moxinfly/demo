@@ -5,7 +5,7 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #Druid连接池
-    url: jdbc:mysql://192.168.188.86:3306/demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://192.168.186.233:3306/demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root #数据库用户名
     driver-class-name: com.mysql.jdbc.Driver #mysql驱动
     initialSize: 10 #初始化连接池大小
