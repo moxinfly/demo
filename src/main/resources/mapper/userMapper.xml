@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.mapper.customer.TbUserMapper">
-    <select id="selfSelectById" parameterType="java.lang.Integer" resultType="com.example.demo.entity.TbUserEntity">
+<mapper namespace="com.example.demo.mybatis_swagger.mapper.customer.TbUserMapper">
+    <select id="selfSelectById" parameterType="java.lang.Integer" resultType="com.example.demo.mybatis_swagger.entity.TbUserEntity">
         SELECT id,user_name,password
         FROM tbuser WHERE id = #{id};
     </select>
